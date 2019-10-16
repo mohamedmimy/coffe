@@ -2,7 +2,7 @@
 
 :root{
     --brightYellow:rgb(245, 152, 38);
-    --darkBrown:#BB9487;
+    --darkBrown:rgb(168, 125, 57);
     --Yellow:rgb(242, 180, 80);
     --brown:#382923;
     --grey:#A9B2Ac; 
@@ -276,4 +276,90 @@ transition: all 0.5s ease-in-out;
         grid-template-rows: 1fr 1fr;
     }
 }
-  
+/* drink section */
+.drink{
+    background: var(--brown);
+    color: var(--brightYellow);
+    text-transform: capitalize;
+}
+.person img{
+    width: 50px;
+    height: 50px;
+}
+
+.drink-form,.drink-card{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 70%;
+    justify-content: center;
+    grid-row-gap: 1.25rem;
+}
+.drink-form__feedback{
+    border: 0.1rem solid var(--brightYellow);
+    padding: 0.25rem;
+    display: none;
+}
+.error{
+    display: block;
+    color: red;
+    border-color: red;
+}
+.success{
+    display: block;
+    color: green;
+    border-color: green;
+}
+.drink-form__title,.drink-card__title{
+    font-size: 3rem;
+}
+.input-name,.input-lastname,.input-email{
+    width: 100%;
+}
+.input-name,.input-lastname,.input-email,.input-supmit{
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.2rem;
+    background: rgb(111, 87, 77,0.6);
+    border:none;
+    outline: none;
+    color: var(--brightYellow);
+}
+.input-name::placeholder,.input-lastname::placeholder,.input-email::placeholder{
+    color: var(--darkBrown);
+    text-transform: capitalize;
+}
+.input-supmit{
+    background: var(--Yellow);
+    color: var(--black);
+    transition: all 0.5s linear;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.input-supmit:hover{
+    opacity: 0.5;
+}
+.drink-card__list{
+    display: grid;
+    grid-template-columns: 100;
+    grid-row-gap: 2rem;
+}
+.person{
+    display: grid;    
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    text-align: left;
+    grid-gap: 1rem;
+    border: 0.1rem solid rgba(111, 87, 77, 0.6);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+}
+.person__thumbnail{
+    border-radius: 50%
+}
+@media screen  and (min-width:786px){
+    .drink-card__list{
+        grid-template-columns: 1fr 1fr;
+        grid-gap:1rem;
+    }
+}
